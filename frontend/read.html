@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/site.css">
+        <script>
+            const activeMenuItem = "mi_read";
+        </script>
+        <script type="module" src="js/lib/template-resolver.js"></script>
+        <script type="module" src="js/lib/common.js"></script>
+        <script type="module" src="js/read.js"></script>
+    </head>
+    <body>
+        <div class="templated flex" data-src="banner"></div>
+        <div class="content">
+            <div class="feedsList">
+                <table>
+                    <thead>
+                        <tr><th>Name</th><th>Url</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td colspan="2">(no feeds)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="templated" data-src="footer"></div>
+    </body>
+</html>

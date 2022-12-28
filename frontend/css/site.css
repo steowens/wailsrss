@@ -1,0 +1,136 @@
+:root {
+    --body-bg-color: #FFE9CF;
+    --body-bg-color-inv: #dd7e11;
+    --body-bg-altcolor: #eec3a7;
+    --body-fg-color: #473826;
+    --body-fg-color-inv: var(--body-bg-color)
+}
+
+body {
+    color: var(--body-fg-color);
+    background-color: var(--body-bg-color);
+    min-height:100vh; 
+    display:flex; 
+    flex-direction:column; 
+    justify-content:space-between
+}
+
+body .content {
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+}
+
+footer {
+    border-top: 1px solid var(--body-fg-color);
+}
+
+.flex {
+    display: flex;
+}
+
+.banner {
+    display: flex;
+    justify-content: right;
+}
+
+.banner a {
+    color: var(--body-fg-color);
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.banner a:hover {
+    color: var(--body-fg-color);
+    text-decoration: underline;
+}
+
+.banner .logo {
+    height: 32px;
+}
+
+.banner-menu {
+    display:flex;
+    margin-left: 50px;
+}
+
+.banner-menu ul {
+    display: flex;
+    height: 100%;
+    align-items: baseline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.banner-menu ul li {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.banner-menu ul li.active {
+    pointer-events: none;
+    font-size: larger;
+}
+
+.centered {
+    text-align: center;
+    justify-content: center;
+}
+
+.halfwidth {
+    width: 50%;
+}
+
+.fullwidth {
+    width: 100%;
+}
+
+.fineprint {
+    font-size: small;
+}
+
+#form1, #form2 {
+    width:50%;
+   }   
+   
+form input {
+    width:300px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:21px;
+    padding: 10px;
+    margin:5px;
+    border:2px solid black;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.22);
+    border-radius: 15px;
+}
+form label {
+    display: inline-block;
+    width:100px;
+    text-align: left;
+    font-weight: 900;
+    font-size: larger;
+}
+
+form button{
+    color:var(--body-fg-color-inv);
+    cursor:pointer;
+    max-width:140px;
+    height: 50px;
+    background:var(--body-bg-color-inv);
+    margin:0 0 5px;
+    padding:10px;
+    font-size:19px;
+    border-radius: 10px;
+}
+
+form button:hover {
+    border-width: 3px;
+}
+
+form button:active {
+    font-weight: 900;
+}
