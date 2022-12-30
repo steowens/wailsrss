@@ -10,6 +10,10 @@ export function DeleteFeed(arg1) {
   return window['go']['main']['App']['DeleteFeed'](arg1);
 }
 
+export function FetchFeedData(arg1) {
+  return window['go']['main']['App']['FetchFeedData'](arg1);
+}
+
 export function GetFeeds() {
   return window['go']['main']['App']['GetFeeds']();
 }

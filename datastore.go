@@ -72,6 +72,14 @@ func (cfg *FeedCfg) Save() (err error) {
 	return
 }
 
+func FetchFeedCfgById(id string) (cfg *FeedCfg, err error) {
+	err = driver.Open(FeedCfg{}).Where("feedid", "=", id).First().AsEntity(cfg)
+	if err != nil {
+		logger.Error("Fetch by ID Error: FeedCfg.feedid = " + id)
+	}
+	return
+}
+
 func (cfg *FeedCfg) Fetch() (jsonVal string, err error) {
 	fp := gofeed.NewParser()
 	feed, err := fp.ParseURL(cfg.Url)

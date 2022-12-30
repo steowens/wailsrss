@@ -3,6 +3,8 @@
 
 export function AppendFeed(arg1:string,arg2:string):Promise<string>;
 
-export function DeleteFeed(arg1:string):Promise<Error>;
+export function DeleteFeed(arg1:string):Promise<string>;
+
+export function FetchFeedData(arg1:string):Promise<string>;
 
 export function GetFeeds():Promise<string>;

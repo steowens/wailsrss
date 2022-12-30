@@ -1,6 +1,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="css/site.css">
+        <link rel="stylesheet" href="css/read.css">
         <script>
             const activeMenuItem = "mi_read";
         </script>
@@ -9,17 +10,19 @@
         <script type="module" src="js/read.js"></script>
     </head>
     <body>
-        <div class="templated flex" data-src="banner"></div>
+        <div class="top templated flex" data-src="banner"></div>
         <div class="content">
-            <div class="feedsList">
-                <table>
-                    <thead>
-                        <tr><th>Name</th><th>Url</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td colspan="2">(no feeds)</td></tr>
-                    </tbody>
-                </table>
+            <div class="left-nav">
+                <ul class="feeds">
+                </ul>
+            </div>
+            <div class="right-area">
+                <div class="feed-summary">
+                    
+                </div>
+                <div class="feed-items">
+
+                </div>
             </div>
         </div>
         <div class="templated" data-src="footer"></div>
