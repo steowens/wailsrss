@@ -3,5 +3,10 @@
 		"feedId": "a22ef97d-2d80-4dd2-9b5a-0acabc2ed22c",
 		"name": "The Daily",
 		"url": "https://feeds.simplecast.com/54nAGcIl"
+	},
+	{
+		"feedId": "fe471df8-8f15-4670-af11-a3b36e1b1716",
+		"name": "NPR",
+		"url": "https://feeds.npr.org/1001/rss.xml"
 	}
 ]

@@ -9,7 +9,11 @@ function populateFeedSummary(feedData){
     let title = summary.querySelector(".title");
     title.innerText = feedData.title;
     let author = summary.querySelector(".author");
-    author.innerText = feedData.author.name;
+    if(feedData.author){
+        author.innerText = feedData.author.name;
+    } else {
+        author.innerHTML = "";
+    }
     let description = summary.querySelector(".description");
     description.innerText = feedData.description;
     let copyright = summary.querySelector(".copyright");
@@ -52,17 +56,28 @@ function createItemHtml(item) {
     titleSpan.innerText = item.title;
     let publishedSpan = rssItem.querySelector(".rss-item-heading .rss-published");
     publishedSpan.innerText = item.published;
-    item.enclosures.forEach(enclosure =>{
-        if(enclosure.type && enclosure.url) {
-            let li = document.createElement("li");
-            let a = document.createElement("a");
-            a.href = enclosure.url;
-            a.innerText = enclosure.type;
-            a.target = "view-frame";
-            li.appendChild(a);
-            enclosuresDiv.appendChild(li);
-        }
-    });
+    let enclosureWrappr = rssItem.querySelector(".enclosures-wrapper");
+    if (item.enclosures) {
+        enclosureWrappr.classList.remove("hidden");
+        item.enclosures.forEach(enclosure =>{
+            if(enclosure.type && enclosure.url) {
+                let li = document.createElement("li");
+                let a = document.createElement("a");
+                a.href = enclosure.url;
+                a.innerText = enclosure.type;
+                a.target = "view-frame";
+                li.appendChild(a);
+                enclosuresDiv.appendChild(li);
+            }
+        });
+    }
+    if (item.link) {
+        let linkWrapper = rssItem.querySelector(".link-wrapper");
+        let link = linkWrapper.querySelector(".rss-link");
+        linkWrapper.classList.remove("hidden");
+        link.href = item.link;
+        link.text = "Read More";
+    }
     return rssItem;
 }
 
