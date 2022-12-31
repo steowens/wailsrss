@@ -13,7 +13,7 @@ See https://wails.io/docs/gettingstarted/installation/
 
 Then clone this project.
 
-Then run builddbg.bat (on Windows).  Coming eventually shell scripts for running the build on Mac and Linux.
+Then run builddbg.bat or buildprod.bat (on Windows).  Coming eventually shell scripts for running the build on Mac and Linux.
 
 Once the project is built simply run *build\bin\wailsrss.exe*
 
