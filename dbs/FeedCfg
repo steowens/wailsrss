@@ -8,5 +8,15 @@
 		"feedId": "fe471df8-8f15-4670-af11-a3b36e1b1716",
 		"name": "NPR",
 		"url": "https://feeds.npr.org/1001/rss.xml"
+	},
+	{
+		"feedId": "b3747682-089a-47ab-a142-cf0c228376c8",
+		"name": "Yahoo News",
+		"url": "https://www.yahoo.com/news/rss"
+	},
+	{
+		"feedId": "6638bbd4-64e9-4919-be4d-a91081486b93",
+		"name": "Yahoo Finance News",
+		"url": "https://finance.yahoo.com/news/rssindex"
 	}
 ]
