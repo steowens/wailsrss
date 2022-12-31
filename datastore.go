@@ -73,10 +73,12 @@ func (cfg *FeedCfg) Save() (err error) {
 }
 
 func FetchFeedCfgById(id string) (cfg *FeedCfg, err error) {
-	err = driver.Open(FeedCfg{}).Where("feedid", "=", id).First().AsEntity(cfg)
+	var target FeedCfg
+	err = driver.Open(FeedCfg{}).Where("feedId", "=", id).First().AsEntity(&target)
 	if err != nil {
-		logger.Error("Fetch by ID Error: FeedCfg.feedid = " + id)
+		logger.Error("Fetch by ID Error: FeedCfg.feedid = " + id + "; " + err.Error())
 	}
+	cfg = &target
 	return
 }
 

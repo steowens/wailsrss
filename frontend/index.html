@@ -10,34 +10,38 @@
         <script type="module" src="js/index.js"></script>
     </head>
     <body>
-        <div class="templated flex" data-src="banner"></div>
-        <div class="content flex ">
-            <div class="halfwidth">
-            <form id="config-form" action="javascript:void()">
-                <div>
-                <label for="input-name">Name
-                <input type="text" id="input-name" required="yes"></input></label>
-                </div>
-                <div>
-                <label for="input-url">Url
-                <input type="text" id="input-url" required="yes"></input></label>
-                </div>
-                <div>
-                <button type="button" id="add-button">Add</button>
-                </div>
-            </form>
+        <div class="top templated flex" data-src="banner"></div>
+        <div class="content">
+            <div class="left-nav">
+                <ul id="feeds" class="feeds">
+                </ul>
             </div>
-            <div class="feedsList flex centered halfwidth">
-                <table class="fullwidth" id="feeds-table">
-                    <thead>
-                        <tr><th>Name</th><th>Url</th><th></th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td colspan="3">(no feeds)</td></tr>
-                    </tbody>
-                </table>
+            <div class="right-area">
+                <div id="feed-summary" class="feed-summary">
+                    <div id="lds-hourglass" class=" hidden"><div id="lds-hourglass" class="lds-hourglass"></div></div>
+                    <div class="title"></div>
+                    <div class="author"></div>
+                    <div class="description"></div>
+                    <div class="copyright"></div>
+                </div>
+                <div id="feed-items" class="feed-items">
+                    <div class="page-links"></div>
+                    <div class="page-content"></div>
+                </div>
             </div>
         </div>
         <div class="templated" data-src="footer"></div>
+        <template id="rss-item-template">
+            <div class="rss-item">
+                <div class="rss-item-heading">
+                    <span class="rss-title"></span> Published:
+                    <span class="rss-published"></span>
+                </div>
+                <div class="author"> by <span class="name"></span> &lt;<span class="email"></span>&gt;</div>
+                <div class="item-content"></div>
+                <div class="enclosures-header">View / Listen</div>
+                <ul class="enclosures"></ul>
+            </div>
+        </template>
     </body>
 </html>

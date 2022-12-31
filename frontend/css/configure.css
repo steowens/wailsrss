@@ -1,0 +1,25 @@
+
+.content table {
+    border-collapse:collapse;
+}
+.content table td {
+    border: 1px solid var(--body-fg-color);
+    padding: 10px;
+}
+
+.content table th {
+    border: 1px solid var(--body-fg-color);
+    padding: 10px;
+    background-color: var(--body-bg-color-inv);
+    color: var(--body-fg-color-inv);
+    font-size: larger;
+    font-weight: 900;
+}
+
+.content table tr {
+    background-color: var(--body-bg-color);
+}
+
+.content table tr:nth-child(even) {
+    background-color: var(--body-bg-altcolor);
+}

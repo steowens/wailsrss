@@ -1,25 +1,183 @@
-
-.content table {
-    border-collapse:collapse;
-}
-.content table td {
-    border: 1px solid var(--body-fg-color);
-    padding: 10px;
+body .top {
+    border-bottom: 1px solid black;
 }
 
-.content table th {
-    border: 1px solid var(--body-fg-color);
-    padding: 10px;
-    background-color: var(--body-bg-color-inv);
-    color: var(--body-fg-color-inv);
-    font-size: larger;
+body .content {
+    display: flex;
+    flex: 1 1 auto;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+
+body .content .left-nav {
+    width: 20%;
+    border-right: 1px solid black;
+    display: inline-block;
+}
+
+body .content .right-area {
+    width: 100%;
+    display: inline-block;
+}
+
+body .content .right-area .feed-summary {
+    display: block;
+    height: 120px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: auto;
+    min-height: 120px;
+}
+
+body .content .right-area .feed-items {
+    width: 100%;
+    display: block;
+    height: auto;
+    overflow: auto;
+    min-height: 400px;
+}
+
+.left-nav .feeds {
+    list-style: none;
+}
+
+.left-nav .feeds li {
     font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    cursor: pointer;
 }
 
-.content table tr {
-    background-color: var(--body-bg-color);
+.left-nav .feeds li:hover {
+    text-decoration: underline;
+    color: var(--body-bg-color-inv);
 }
 
-.content table tr:nth-child(even) {
-    background-color: var(--body-bg-altcolor);
+
+.right-area .feed-items {
+    overflow: auto;
+}
+
+.right-area .feed-summary .title {
+    font-weight: 900;
+    font-size: larger;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.right-area .feed-summary .author {
+    font-weight: 600;
+    font-size: smaller;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.right-area .feed-summary .description {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: normal;
+    font-size: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.right-area .feed-summary .copyright {
+    font-weight: 400;
+    font-size: smaller;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+
+.right-area .feed-items .page-links {
+    display: block;
+    font-weight: 100;
+    color: black;
+    padding: 8px;
+    max-height: 100px;
+    overflow: auto;
+    border-bottom: 1px dashed black;
+}
+
+.right-area .feed-items .page-links .link {
+    display: inline-block;
+    margin-left: 10px;
+    color: blue;
+    cursor: pointer;
+}
+
+.right-area .feed-items .page-links .link:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.right-area .feed-items .page-links .link.current {
+    pointer-events: none;
+    color: black;
+    border: 1px dashed gray;
+}
+
+
+.right-area .feed-items .page-content {
+    background-color: white;
+    overflow: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.right-area .feed-items .page-content .rss-item {
+    margin-top: 15px;
+    border-bottom: 1px dashed darkslategray;
+}
+
+.right-area .feed-items .page-content .rss-item .author {
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: smaller;
+}
+
+.rss-item-heading .rss-title {
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+.lds-hourglass {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-hourglass:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 32px solid #000000;
+    border-color: #000000 transparent #000000 transparent;
+    animation: lds-hourglass 1.2s infinite;
+}
+
+@keyframes lds-hourglass {
+    0% {
+        transform: rotate(0);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+
+    50% {
+        transform: rotate(900deg);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    100% {
+        transform: rotate(1800deg);
+    }
 }
